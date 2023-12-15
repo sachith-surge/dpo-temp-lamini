@@ -560,7 +560,7 @@ def get_oa_guanaco(split: str, silent: bool = False, cache_dir: str = None) -> D
             progress.update(count_all_nodes(row_node))
 
     print(f'Loading OA dataset ({split} split) from Huggingface...')
-    dataset = datasets.load_dataset("OpenAssistant/oasst1", split=split, cache_dir=cache_dir)
+    dataset = datasets.load_dataset("OpenAssistant/oasst1", split=split)
     dataset = oa_apply_filters(dataset)
     print('done')
 
